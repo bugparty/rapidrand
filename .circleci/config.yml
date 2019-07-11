@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Build the Linux wheels.
           command: |
-            pip install
+            pip install cibuildwheel
             cibuildwheel --output-dir wheelhouse
       - store_artifacts:
           path: wheelhouse/
