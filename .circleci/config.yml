@@ -2,7 +2,7 @@ version: 2
 
 jobs:
   linux-wheels:
-    working_directory: ~/linux-wheels
+
     docker:
       - image: circleci/python:3.6
     steps:
@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Build the Linux wheels.
           command: |
-            pip install --user cibuildwheel
+            pip install
             cibuildwheel --output-dir wheelhouse
       - store_artifacts:
           path: wheelhouse/
