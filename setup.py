@@ -60,15 +60,19 @@ class CMakeBuild(build_ext):
 
 setup(
     name='rapidrand',
-    version='0.1',
+    version='0.1.1',
     author='bowman',
     author_email='fancycode@gmail.com',
     url="https://github.com/bugparty/rapidrand",
     description='fast random string generations for python',
     long_description=long_description,
     long_description_content_type="text/markdown",
+    platforms='any',
     classifiers=[
-        "Programming Language :: Python :: 2",
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
     ],
     ext_modules=[CMakeExtension('rapidrand')],
     cmdclass=dict(build_ext=CMakeBuild),

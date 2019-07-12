@@ -1,0 +1,5 @@
+build/
+conda.recipe/
+cmake-build-debug
+dist/
+rapidrand.egg-info
